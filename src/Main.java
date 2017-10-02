@@ -10,6 +10,7 @@ public class Main {
 		HttpServer server = HttpServer.create(new InetSocketAddress("localhost", 1997), 0);
 		server.createContext("/", new IndexHandler());
 		server.createContext("/test", new TestHandler());
+		server.createContext("/addMessage", new AddMessageHandler());
 		server.start();
 	}
 }
